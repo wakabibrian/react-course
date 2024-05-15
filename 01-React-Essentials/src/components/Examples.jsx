@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-import { EXAMPLES } from "../data";
 import TabButton from "./TabButton";
+import Section from "./Section";
+import { EXAMPLES } from "../data";
 
 export default function Examples() {
   const [selectTopic, setSelectTopic] = useState();
@@ -11,30 +12,29 @@ export default function Examples() {
   }
 
   return (
-    <section id="examples">
-      <h2>Examples</h2>
+    <Section title="Examples" id="examples">
       <menu>
         <TabButton
           isSelected={selectTopic === "components"}
-          onSelect={() => handleSelect("components")}
+          onClick={() => handleSelect("components")}
         >
           Components
         </TabButton>
         <TabButton
           isSelected={selectTopic === "jsx"}
-          onSelect={() => handleSelect("jsx")}
+          onClick={() => handleSelect("jsx")}
         >
           JSX
         </TabButton>
         <TabButton
           isSelected={selectTopic === "props"}
-          onSelect={() => handleSelect("props")}
+          onClick={() => handleSelect("props")}
         >
           Props
         </TabButton>
         <TabButton
           isSelected={selectTopic === "state"}
-          onSelect={() => handleSelect("state")}
+          onClick={() => handleSelect("state")}
         >
           State
         </TabButton>
@@ -50,6 +50,6 @@ export default function Examples() {
           </pre>
         </div>
       )}
-    </section>
+    </Section>
   );
 }
