@@ -55,7 +55,6 @@ export default function Examples() {
           </div>
         )}
       </Tabs>
-      <menu></menu>
     </Section>
   );
 }
